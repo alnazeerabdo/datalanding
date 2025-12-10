@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>دورة تحليل البيانات</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script>
     tailwind.config = {
@@ -33,90 +37,112 @@
     body {
       font-family: 'Tajawal', sans-serif;
     }
+
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
-    
+
     /* Animations */
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     @keyframes fadeInLeft {
       from {
         opacity: 0;
         transform: translateX(-30px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
-    
+
     @keyframes fadeInRight {
       from {
         opacity: 0;
         transform: translateX(30px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
-    
+
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
     }
-    
+
     @keyframes slideIn {
       from {
         opacity: 0;
         transform: translateX(100px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
-    
+
     .animate-fade-in-up {
       animation: fadeInUp 0.8s ease-out forwards;
     }
-    
+
     .animate-fade-in-left {
       animation: fadeInLeft 0.8s ease-out forwards;
     }
-    
+
     .animate-fade-in-right {
       animation: fadeInRight 0.8s ease-out forwards;
     }
-    
+
     .animate-float {
       animation: float 3s ease-in-out infinite;
     }
-    
+
     .animate-slide-in {
       animation: slideIn 0.5s ease-out forwards;
     }
-    
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    .delay-400 { animation-delay: 0.4s; }
-    .delay-500 { animation-delay: 0.5s; }
-    
+
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
     /* WhatsApp Style Cards with Black Border */
     .card-bordered {
       border: 2px solid #1f2937;
@@ -125,38 +151,38 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
-    
+
     .card-bordered:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
       border-color: #111827;
     }
-    
+
     .dark .card-bordered {
       background: #1f2937;
       border-color: #4b5563;
     }
-    
+
     .dark .card-bordered:hover {
       border-color: #9ca3af;
     }
-    
+
     /* Slider Styles */
     .testimonial-slider {
       overflow: hidden;
       position: relative;
     }
-    
+
     .testimonial-track {
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
-    
+
     .testimonial-slide {
       min-width: 100%;
       padding: 0 1rem;
     }
-    
+
     .slider-dot {
       width: 12px;
       height: 12px;
@@ -165,28 +191,28 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .slider-dot.active {
       background: #1f2937;
       transform: scale(1.2);
     }
-    
+
     /* Logo Animation */
     .logo-icon {
       transition: transform 0.3s ease;
     }
-    
+
     .logo-icon:hover {
       transform: rotate(360deg);
     }
-    
+
     /* Button Hover Effects */
     .btn-animate {
       position: relative;
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    
+
     .btn-animate::before {
       content: '';
       position: absolute;
@@ -194,27 +220,28 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
       transition: left 0.5s ease;
     }
-    
+
     .btn-animate:hover::before {
       left: 100%;
     }
-    
+
     /* Scroll Animation Observer */
     .scroll-animate {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.6s ease-out;
     }
-    
+
     .scroll-animate.visible {
       opacity: 1;
       transform: translateY(0);
     }
   </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 font-sans">
   <div class="container mx-auto px-4 md:px-8">
     <header class="py-6 flex justify-between items-center animate-fade-in-up">
@@ -225,22 +252,30 @@
       <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-gray-600 dark:text-gray-300">
         <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group" href="#home">
           الرئيسية
-          <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group" href="#about">
+        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group"
+          href="#about">
           عن الدورة
-          <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group" href="#features">
+        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group"
+          href="#features">
           المميزات
-          <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group" href="#contact">
+        <a class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group"
+          href="#contact">
           تواصل معنا
-          <span class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
+          <span
+            class="absolute bottom-0 right-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </nav>
-      <a class="btn-animate bg-gray-800 dark:bg-gray-700 text-white px-6 py-2.5 rounded-lg shadow-md hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors" href="#">
+      <a class="btn-animate bg-gray-800 dark:bg-gray-700 text-white px-6 py-2.5 rounded-lg shadow-md hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors"
+        href="#">
         سجل الآن
       </a>
     </header>
@@ -252,25 +287,33 @@
             أطلق مسيرتك في تحليل البيانات
             <span class="inline-block transform -scale-x-100 ml-2">→</span>
           </h1>
-          <p class="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-md mx-auto md:mx-0 animate-fade-in-up delay-200">
+          <p
+            class="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-md mx-auto md:mx-0 animate-fade-in-up delay-200">
             انضم إلى دورتنا الشاملة وتعلم المهارات المطلوبة لتصبح محلل بيانات محترف.
           </p>
-          <a class="mt-8 inline-flex items-center btn-animate bg-primary text-gray-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:brightness-105 transition-all group animate-fade-in-up delay-300" href="#">
+          <a class="mt-8 inline-flex items-center btn-animate bg-primary text-gray-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:brightness-105 transition-all group animate-fade-in-up delay-300"
+            href="#">
             ابدأ رحلتك
-            <span class="material-symbols-outlined mr-2 transition-transform group-hover:translate-x-1">arrow_back</span>
+            <span
+              class="material-symbols-outlined mr-2 transition-transform group-hover:translate-x-1">arrow_back</span>
           </a>
         </div>
         <div class="relative flex justify-center animate-fade-in-left">
           <div class="absolute inset-0 bg-pink-100 dark:bg-pink-900/30 rounded-full blur-3xl opacity-50"></div>
           <div class="relative w-full max-w-md">
-            <img alt="تحليل البيانات" class="w-full h-auto rounded-3xl shadow-2xl border-2 border-gray-800" src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/1765354510087-019b0754-81c9-70a8-8625-e17124856d80.webp"/>
-            <div class="absolute -bottom-8 -left-8 bg-teal-100 dark:bg-teal-900 p-4 rounded-full shadow-lg animate-float border-2 border-gray-800">
-              <span class="material-symbols-outlined text-4xl text-teal-600 dark:text-teal-400 transform -scale-x-100">arrow_forward</span>
+            <img alt="تحليل البيانات" class="w-full h-auto rounded-3xl shadow-2xl border-2 border-gray-800"
+              src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/1765354510087-019b0754-81c9-70a8-8625-e17124856d80.webp" />
+            <div
+              class="absolute -bottom-8 -left-8 bg-teal-100 dark:bg-teal-900 p-4 rounded-full shadow-lg animate-float border-2 border-gray-800">
+              <span
+                class="material-symbols-outlined text-4xl text-teal-600 dark:text-teal-400 transform -scale-x-100">arrow_forward</span>
             </div>
-            <div class="absolute -top-8 -right-8 bg-yellow-100 dark:bg-yellow-900 p-4 rounded-full shadow-lg animate-float delay-200 border-2 border-gray-800">
+            <div
+              class="absolute -top-8 -right-8 bg-yellow-100 dark:bg-yellow-900 p-4 rounded-full shadow-lg animate-float delay-200 border-2 border-gray-800">
               <span class="material-symbols-outlined text-4xl text-yellow-500 dark:text-yellow-400">star_outline</span>
             </div>
-            <div class="absolute -bottom-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg animate-float delay-300 border-2 border-gray-800">
+            <div
+              class="absolute -bottom-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg animate-float delay-300 border-2 border-gray-800">
               <span class="material-symbols-outlined text-2xl text-green-500">check_circle</span>
             </div>
           </div>
@@ -283,21 +326,25 @@
     <div class="container mx-auto px-4">
       <p class="text-center text-sm mb-4">شركات يثق بها خريجونا</p>
       <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-16">
-        <div class="flex items-center space-x-2 space-x-reverse font-bold text-xl text-white card-bordered px-6 py-3 bg-gray-800 hover:scale-105 transition-transform border-gray-600">
-          <span class="material-symbols-outlined text-purple-400">public</span>
-          <span>Google</span>
+        <div
+          class="flex items-center justify-center card-bordered px-6 py-3 bg-white hover:scale-105 transition-transform border-gray-200 shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
+            class="h-8 w-auto">
         </div>
-        <div class="flex items-center space-x-2 space-x-reverse font-bold text-xl text-white card-bordered px-6 py-3 bg-gray-800 hover:scale-105 transition-transform border-gray-600">
-          <span class="material-symbols-outlined text-blue-400">groups</span>
-          <span>Meta</span>
+        <div
+          class="flex items-center justify-center card-bordered px-6 py-3 bg-white hover:scale-105 transition-transform border-gray-200 shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta"
+            class="h-6 w-auto">
         </div>
-        <div class="flex items-center space-x-2 space-x-reverse font-bold text-xl text-white card-bordered px-6 py-3 bg-gray-800 hover:scale-105 transition-transform border-gray-600">
-          <span class="material-symbols-outlined text-green-400">window</span>
-          <span>Microsoft</span>
+        <div
+          class="flex items-center justify-center card-bordered px-6 py-3 bg-white hover:scale-105 transition-transform border-gray-200 shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft"
+            class="h-8 w-auto">
         </div>
-        <div class="flex items-center space-x-2 space-x-reverse font-bold text-xl text-white card-bordered px-6 py-3 bg-gray-800 hover:scale-105 transition-transform border-gray-600">
-          <span class="material-symbols-outlined text-red-400">smart_toy</span>
-          <span>OpenAI</span>
+        <div
+          class="flex items-center justify-center card-bordered px-6 py-3 bg-white hover:scale-105 transition-transform border-gray-200 shadow-sm">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI"
+            class="h-8 w-auto">
         </div>
       </div>
     </div>
@@ -305,12 +352,14 @@
 
   <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark" id="features">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white scroll-animate">ماذا ستتعلم في دورتنا؟</h2>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white scroll-animate">ماذا ستتعلم في
+        دورتنا؟</h2>
       <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto scroll-animate">
         نغطي جميع الجوانب الأساسية والمتقدمة في تحليل البيانات لتزويدك بالخبرة العملية التي تحتاجها.
       </p>
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-teal-100 dark:bg-teal-900/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
+        <div
+          class="bg-teal-100 dark:bg-teal-900/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
           <div class="inline-block p-4 bg-white dark:bg-gray-800 rounded-xl mb-4 border-2 border-gray-800">
             <span class="material-symbols-outlined text-3xl text-teal-600 dark:text-teal-400">query_stats</span>
           </div>
@@ -319,7 +368,8 @@
             تعلم كيفية استخلاص البيانات من مصادر متعددة ومعالجتها لتكون جاهزة للتحليل الدقيق.
           </p>
         </div>
-        <div class="bg-pink-100 dark:bg-pink-900/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
+        <div
+          class="bg-pink-100 dark:bg-pink-900/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
           <div class="inline-block p-4 bg-white dark:bg-gray-800 rounded-xl mb-4 border-2 border-gray-800">
             <span class="material-symbols-outlined text-3xl text-pink-600 dark:text-pink-400">code</span>
           </div>
@@ -328,7 +378,8 @@
             إتقان المفاهيم الإحصائية الأساسية وتطبيقها باستخدام لغات مثل Python و R.
           </p>
         </div>
-        <div class="bg-yellow-100 dark:bg-yellow-800/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
+        <div
+          class="bg-yellow-100 dark:bg-yellow-800/40 p-8 rounded-2xl shadow-sm text-right card-bordered scroll-animate hover:scale-105 transition-transform duration-300">
           <div class="inline-block p-4 bg-white dark:bg-gray-800 rounded-xl mb-4 border-2 border-gray-800">
             <span class="material-symbols-outlined text-3xl text-yellow-600 dark:text-yellow-400">insights</span>
           </div>
@@ -345,30 +396,36 @@
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="flex justify-center scroll-animate">
-          <img alt="خبير تحليل البيانات" class="rounded-2xl shadow-xl w-full max-w-sm border-2 border-gray-800" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop"/>
+          <img alt="خبير تحليل البيانات" class="rounded-2xl shadow-xl w-full max-w-sm border-2 border-gray-800"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" />
         </div>
         <div class="text-gray-900 text-center md:text-right">
           <h2 class="text-3xl md:text-4xl font-extrabold scroll-animate">لماذا تختار دورتنا؟</h2>
           <div class="mt-10 space-y-8">
-            <div class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
+            <div
+              class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
               <span class="text-5xl font-black">5+</span>
               <div>
                 <h3 class="text-xl font-bold">سنوات من الخبرة</h3>
-                <p class="mt-1 text-gray-800">يقدم الدورة خبراء يتمتعون بخبرة عملية واسعة في مجال تحليل البيانات مع كبرى الشركات.</p>
+                <p class="mt-1 text-gray-800">يقدم الدورة خبراء يتمتعون بخبرة عملية واسعة في مجال تحليل البيانات مع كبرى
+                  الشركات.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
+            <div
+              class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
               <span class="text-5xl font-black">86</span>
               <div>
                 <h3 class="text-xl font-bold">مشروعاً عملياً</h3>
                 <p class="mt-1 text-gray-800">ستعمل على مشاريع حقيقية تمنحك الثقة والخبرة اللازمة لسوق العمل.</p>
               </div>
             </div>
-            <div class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
+            <div
+              class="flex items-start gap-4 card-bordered p-6 bg-white/80 scroll-animate hover:scale-102 transition-transform">
               <span class="text-5xl font-black">32+</span>
               <div>
                 <h3 class="text-xl font-bold">شريك توظيف</h3>
-                <p class="mt-1 text-gray-800">لدينا شبكة واسعة من الشركات الشريكة التي تبحث عن توظيف خريجينا المتميزين.</p>
+                <p class="mt-1 text-gray-800">لدينا شبكة واسعة من الشركات الشريكة التي تبحث عن توظيف خريجينا المتميزين.
+                </p>
               </div>
             </div>
           </div>
@@ -380,7 +437,8 @@
   <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white scroll-animate">نماذج من مشاريع الطلاب</h2>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white scroll-animate">نماذج من مشاريع
+          الطلاب</h2>
         <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto scroll-animate">
           اطلع على بعض المشاريع المبتكرة التي أنجزها طلابنا خلال الدورة.
         </p>
@@ -388,39 +446,50 @@
       <div class="space-y-16">
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="text-right card-bordered p-8 scroll-animate">
-            <span class="text-sm font-semibold bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-3 py-1 rounded-full">تحليل المبيعات</span>
+            <span
+              class="text-sm font-semibold bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 px-3 py-1 rounded-full">تحليل
+              المبيعات</span>
             <h3 class="mt-4 text-2xl font-bold text-gray-900 dark:text-white">مشروع تحليل أداء المبيعات</h3>
             <p class="mt-3 text-gray-600 dark:text-gray-400">
               تحليل بيانات المبيعات لتحديد الاتجاهات، وفهم سلوك العملاء، وتقديم توصيات لزيادة الإيرادات.
             </p>
-            <a class="mt-6 inline-flex items-center text-gray-800 dark:text-gray-200 font-bold group hover:underline" href="#">
+            <a class="mt-6 inline-flex items-center text-gray-800 dark:text-gray-200 font-bold group hover:underline"
+              href="#">
               <span>شاهد المشروع كاملاً</span>
-              <span class="material-symbols-outlined mr-2 transform -scale-x-100 transition-transform group-hover:-translate-x-1">arrow_forward</span>
+              <span
+                class="material-symbols-outlined mr-2 transform -scale-x-100 transition-transform group-hover:-translate-x-1">arrow_forward</span>
             </a>
           </div>
           <div class="flex justify-center scroll-animate">
-            <img alt="تحليل المبيعات" class="rounded-2xl shadow-lg w-full max-w-md border-2 border-gray-800" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=350&fit=crop"/>
+            <img alt="تحليل المبيعات" class="rounded-2xl shadow-lg w-full max-w-md border-2 border-gray-800"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=350&fit=crop" />
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div class="flex justify-center md:order-last scroll-animate">
-            <img alt="تحليل السوق" class="rounded-2xl shadow-lg w-full max-w-md border-2 border-gray-800" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&h=350&fit=crop"/>
+            <img alt="تحليل السوق" class="rounded-2xl shadow-lg w-full max-w-md border-2 border-gray-800"
+              src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&h=350&fit=crop" />
           </div>
           <div class="text-right md:order-first card-bordered p-8 scroll-animate">
-            <span class="text-sm font-semibold bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-3 py-1 rounded-full">تحليل السوق</span>
+            <span
+              class="text-sm font-semibold bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 px-3 py-1 rounded-full">تحليل
+              السوق</span>
             <h3 class="mt-4 text-2xl font-bold text-gray-900 dark:text-white">مشروع تحليل توجهات السوق</h3>
             <p class="mt-3 text-gray-600 dark:text-gray-400">
               استخدام تقنيات تحليل البيانات المتقدمة لدراسة المنافسين وتحديد الفرص الجديدة في السوق.
             </p>
-            <a class="mt-6 inline-flex items-center text-gray-800 dark:text-gray-200 font-bold group hover:underline" href="#">
+            <a class="mt-6 inline-flex items-center text-gray-800 dark:text-gray-200 font-bold group hover:underline"
+              href="#">
               <span>شاهد المشروع كاملاً</span>
-              <span class="material-symbols-outlined mr-2 transform -scale-x-100 transition-transform group-hover:-translate-x-1">arrow_forward</span>
+              <span
+                class="material-symbols-outlined mr-2 transform -scale-x-100 transition-transform group-hover:-translate-x-1">arrow_forward</span>
             </a>
           </div>
         </div>
       </div>
       <div class="text-center mt-16">
-        <a class="btn-animate inline-flex items-center bg-primary text-gray-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:brightness-105 transition-all group" href="#">
+        <a class="btn-animate inline-flex items-center bg-primary text-gray-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:brightness-105 transition-all group"
+          href="#">
           عرض كل المشاريع
           <span class="material-symbols-outlined mr-2 transition-transform group-hover:translate-x-1">arrow_back</span>
         </a>
@@ -431,9 +500,11 @@
   <!-- Testimonials Slider Section -->
   <section class="py-16 md:py-24 bg-teal-50 dark:bg-teal-900/30">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 scroll-animate">ماذا يقول خريجونا؟</h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-12 scroll-animate">آراء حقيقية من طلاب حققوا نجاحات مهنية بعد الدورة</p>
-      
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 scroll-animate">ماذا يقول
+        خريجونا؟</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-12 scroll-animate">آراء حقيقية من طلاب حققوا نجاحات مهنية بعد الدورة
+      </p>
+
       <div class="relative max-w-4xl mx-auto">
         <div class="testimonial-slider">
           <div class="testimonial-track" id="testimonialTrack">
@@ -441,13 +512,15 @@
             <div class="testimonial-slide">
               <div class="card-bordered p-8 mx-4 bg-white dark:bg-gray-800">
                 <div class="flex justify-center mb-6">
-                  <img alt="خالد أحمد" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover" src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/male%201.webp"/>
+                  <img alt="خالد أحمد" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover"
+                    src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/male%201.webp" />
                 </div>
                 <div class="flex justify-center mb-4">
                   <span class="text-yellow-400 text-2xl">★★★★★</span>
                 </div>
                 <blockquote class="text-xl text-gray-800 dark:text-gray-200 italic leading-loose">
-                  "كانت هذه الدورة نقلة نوعية في مسيرتي المهنية. المحتوى العملي والدعم المستمر من المدربين ساعدني على الحصول على وظيفة أحلامي كمحلل بيانات."
+                  "كانت هذه الدورة نقلة نوعية في مسيرتي المهنية. المحتوى العملي والدعم المستمر من المدربين ساعدني على
+                  الحصول على وظيفة أحلامي كمحلل بيانات."
                 </blockquote>
                 <p class="mt-6 font-bold text-gray-900 dark:text-white text-xl">خالد أحمد</p>
                 <p class="text-gray-600 dark:text-gray-400 font-semibold">محلل بيانات في شركة تكنولوجيا</p>
@@ -457,13 +530,15 @@
             <div class="testimonial-slide">
               <div class="card-bordered p-8 mx-4 bg-white dark:bg-gray-800">
                 <div class="flex justify-center mb-6">
-                  <img alt="سارة محمد" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover" src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/femail%201.webp"/>
+                  <img alt="سارة محمد" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover"
+                    src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/femail%201.webp" />
                 </div>
                 <div class="flex justify-center mb-4">
                   <span class="text-yellow-400 text-2xl">★★★★★</span>
                 </div>
                 <blockquote class="text-xl text-gray-800 dark:text-gray-200 italic leading-loose">
-                  "الدورة غيرت حياتي المهنية بالكامل! تعلمت مهارات لم أكن أتخيل أنني سأتقنها. الآن أعمل في إحدى أكبر الشركات العالمية."
+                  "الدورة غيرت حياتي المهنية بالكامل! تعلمت مهارات لم أكن أتخيل أنني سأتقنها. الآن أعمل في إحدى أكبر
+                  الشركات العالمية."
                 </blockquote>
                 <p class="mt-6 font-bold text-gray-900 dark:text-white text-xl">سارة محمد</p>
                 <p class="text-gray-600 dark:text-gray-400 font-semibold">مديرة تحليل البيانات في شركة استشارية</p>
@@ -473,13 +548,15 @@
             <div class="testimonial-slide">
               <div class="card-bordered p-8 mx-4 bg-white dark:bg-gray-800">
                 <div class="flex justify-center mb-6">
-                  <img alt="أحمد علي" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover" src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/male%202.webp"/>
+                  <img alt="أحمد علي" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover"
+                    src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/male%202.webp" />
                 </div>
                 <div class="flex justify-center mb-4">
                   <span class="text-yellow-400 text-2xl">★★★★★</span>
                 </div>
                 <blockquote class="text-xl text-gray-800 dark:text-gray-200 italic leading-loose">
-                  "أفضل استثمار قمت به في نفسي. المشاريع العملية والتطبيقات الحقيقية جعلتني جاهزاً لسوق العمل من اليوم الأول."
+                  "أفضل استثمار قمت به في نفسي. المشاريع العملية والتطبيقات الحقيقية جعلتني جاهزاً لسوق العمل من اليوم
+                  الأول."
                 </blockquote>
                 <p class="mt-6 font-bold text-gray-900 dark:text-white text-xl">أحمد علي</p>
                 <p class="text-gray-600 dark:text-gray-400 font-semibold">عالم بيانات في شركة ناشئة</p>
@@ -489,13 +566,15 @@
             <div class="testimonial-slide">
               <div class="card-bordered p-8 mx-4 bg-white dark:bg-gray-800">
                 <div class="flex justify-center mb-6">
-                  <img alt="نورة العتيبي" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover" src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/femail%202.webp"/>
+                  <img alt="نورة العتيبي" class="w-24 h-24 rounded-full shadow-lg border-2 border-gray-800 object-cover"
+                    src="https://raw.githubusercontent.com/alnazeerabdo/datalanding/main/femail%202.webp" />
                 </div>
                 <div class="flex justify-center mb-4">
                   <span class="text-yellow-400 text-2xl">★★★★★</span>
                 </div>
                 <blockquote class="text-xl text-gray-800 dark:text-gray-200 italic leading-loose">
-                  "الدعم المستمر من الفريق والمنهج المتكامل ساعداني على الانتقال من مجال مختلف تماماً إلى تحليل البيانات بسلاسة."
+                  "الدعم المستمر من الفريق والمنهج المتكامل ساعداني على الانتقال من مجال مختلف تماماً إلى تحليل البيانات
+                  بسلاسة."
                 </blockquote>
                 <p class="mt-6 font-bold text-gray-900 dark:text-white text-xl">نورة العتيبي</p>
                 <p class="text-gray-600 dark:text-gray-400 font-semibold">محللة أعمال في بنك كبير</p>
@@ -503,15 +582,17 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Navigation Arrows -->
-        <button id="prevBtn" class="absolute top-1/2 right-0 -translate-y-1/2 -translate-x-4 md:translate-x-8 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-800 hover:text-white transition-all duration-300 border-2 border-gray-800 z-10">
+        <button id="prevBtn"
+          class="absolute top-1/2 right-0 -translate-y-1/2 -translate-x-4 md:translate-x-8 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-800 hover:text-white transition-all duration-300 border-2 border-gray-800 z-10">
           <span class="material-symbols-outlined">arrow_forward_ios</span>
         </button>
-        <button id="nextBtn" class="absolute top-1/2 left-0 -translate-y-1/2 translate-x-4 md:-translate-x-8 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-800 hover:text-white transition-all duration-300 border-2 border-gray-800 z-10">
+        <button id="nextBtn"
+          class="absolute top-1/2 left-0 -translate-y-1/2 translate-x-4 md:-translate-x-8 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:bg-gray-800 hover:text-white transition-all duration-300 border-2 border-gray-800 z-10">
           <span class="material-symbols-outlined">arrow_back_ios</span>
         </button>
-        
+
         <!-- Dots Navigation -->
         <div class="flex justify-center gap-3 mt-8" id="dotsContainer">
           <button class="slider-dot active" data-index="0"></button>
@@ -535,13 +616,19 @@
         <form class="w-full max-w-lg mx-auto space-y-4 card-bordered p-8 bg-white dark:bg-gray-800 scroll-animate">
           <div>
             <label class="sr-only" for="name">الاسم</label>
-            <input class="w-full px-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary transition-all duration-300" id="name" placeholder="الاسم" type="text"/>
+            <input
+              class="w-full px-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary transition-all duration-300"
+              id="name" placeholder="الاسم" type="text" />
           </div>
           <div>
             <label class="sr-only" for="email">البريد الإلكتروني</label>
-            <input class="w-full px-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary transition-all duration-300" id="email" placeholder="البريد الإلكتروني" type="email"/>
+            <input
+              class="w-full px-4 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:ring-primary focus:border-primary transition-all duration-300"
+              id="email" placeholder="البريد الإلكتروني" type="email" />
           </div>
-          <button class="w-full btn-animate flex justify-between items-center bg-gray-900 dark:bg-gray-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors" type="submit">
+          <button
+            class="w-full btn-animate flex justify-between items-center bg-gray-900 dark:bg-gray-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+            type="submit">
             <span>اطلب استشارة مجانية</span>
             <span class="material-symbols-outlined transform -scale-x-100">arrow_forward</span>
           </button>
@@ -579,8 +666,11 @@
         <div>
           <h4 class="font-bold text-white mb-4">اشترك في نشرتنا الإخبارية</h4>
           <form class="flex">
-            <input class="flex-grow bg-gray-800 border-2 border-gray-700 rounded-r-lg focus:ring-primary focus:border-primary px-4" placeholder="بريدك الإلكتروني" type="email"/>
-            <button class="bg-primary text-gray-900 px-4 rounded-l-lg font-bold hover:brightness-105 transition-all">إرسال</button>
+            <input
+              class="flex-grow bg-gray-800 border-2 border-gray-700 rounded-r-lg focus:ring-primary focus:border-primary px-4"
+              placeholder="بريدك الإلكتروني" type="email" />
+            <button
+              class="bg-primary text-gray-900 px-4 rounded-l-lg font-bold hover:brightness-105 transition-all">إرسال</button>
           </form>
         </div>
       </div>
@@ -597,47 +687,47 @@
     const dots = document.querySelectorAll('.slider-dot');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    
+
     let currentIndex = 0;
     const totalSlides = slides.length;
     let autoSlideInterval;
-    
+
     function updateSlider() {
       track.style.transform = `translateX(${currentIndex * 100}%)`;
       dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentIndex);
       });
     }
-    
+
     function nextSlide() {
       currentIndex = (currentIndex + 1) % totalSlides;
       updateSlider();
     }
-    
+
     function prevSlide() {
       currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
       updateSlider();
     }
-    
+
     function startAutoSlide() {
       autoSlideInterval = setInterval(nextSlide, 5000);
     }
-    
+
     function resetAutoSlide() {
       clearInterval(autoSlideInterval);
       startAutoSlide();
     }
-    
+
     prevBtn.addEventListener('click', () => {
       prevSlide();
       resetAutoSlide();
     });
-    
+
     nextBtn.addEventListener('click', () => {
       nextSlide();
       resetAutoSlide();
     });
-    
+
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         currentIndex = index;
@@ -645,23 +735,23 @@
         resetAutoSlide();
       });
     });
-    
+
     // Start auto slide
     startAutoSlide();
-    
+
     // Touch support for mobile
     let touchStartX = 0;
     let touchEndX = 0;
-    
+
     track.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
     });
-    
+
     track.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
     });
-    
+
     function handleSwipe() {
       const swipeThreshold = 50;
       if (touchEndX < touchStartX - swipeThreshold) {
@@ -673,13 +763,13 @@
         resetAutoSlide();
       }
     }
-    
+
     // Scroll Animation Observer
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -687,10 +777,11 @@
         }
       });
     }, observerOptions);
-    
+
     document.querySelectorAll('.scroll-animate').forEach(el => {
       observer.observe(el);
     });
   </script>
 </body>
+
 </html>
